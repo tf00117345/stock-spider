@@ -8,7 +8,7 @@ class StockCodePipeline(object):
     def __init__(self):
         """
         Initializes database connection and sessionmaker.
-        Creates deals table.
+        Create deals table.
         """
         self.engine = db_connect()
         self.Session = sessionmaker(bind=self.engine)

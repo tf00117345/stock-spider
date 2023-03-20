@@ -1,6 +1,5 @@
 from scrapy.utils.project import get_project_settings
-from sqlalchemy import (
-    Text, Integer)
+from sqlalchemy import (Text, Integer)
 from sqlalchemy import create_engine, Column
 from sqlalchemy.ext.declarative import declarative_base
 
@@ -12,7 +11,7 @@ def db_connect():
     Performs database connection using database settings from settings.py.
     Returns sqlalchemy engine instance
     """
-    return create_engine(get_project_settings().get("CONNECTION_STRING"))
+    return create_engine(get_project_settings().get("DATABASE_URI"))
 
 
 def create_table(engine):

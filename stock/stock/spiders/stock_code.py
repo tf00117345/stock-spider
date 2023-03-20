@@ -1,11 +1,12 @@
-import scrapy
 import pandas as pd
-
-from scrapy.exceptions import CloseSpider
+import scrapy
 from dateutil.parser import *
+from scrapy.exceptions import CloseSpider
 
 
 # 獲取所有上市和上櫃的證券代號及名稱
+
+
 class AllStockCodeSpider(scrapy.Spider):
     # Spider 的名字必須是唯一
     name = "stock_code"
